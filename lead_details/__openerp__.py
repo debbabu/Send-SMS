@@ -5,8 +5,11 @@
     'description': """
 
 =======================
+1.This module show the details of the lead. When any lead update it shows, which field updated.
 
-This module show the details of the lead. When any lead update it shows, which field updated.
+2.You can get all details of lead in Report section of Sales menu.
+Sales > Report > Lead Details.
+
     """,
     'author': "Debasisa Dash",
     'website': "http://www.fdshive.com",
