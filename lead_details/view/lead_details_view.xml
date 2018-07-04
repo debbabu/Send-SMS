@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+     <!-- Lead Detail -->
+       <record id="lead_details_form_view" model="ir.ui.view">
+          <field name="name">lead_details form</field>
+          <field name="model">lead_details</field>
+          <field name="arch" type="xml">
+              <form string="Lead Details" create="false" edit="false">
+                <header>
+                  <button name="print_lead" string="Print Lead" type="object" class="oe_highlight"/>
+                </header>
+                  <group>
+                      <field name="name"/>
+                      <field name="original_name" invisible='1'/>
+                      <field name="email"/>
+                      <field name="mobile"/>
+                  </group>
+                  <notebook>
+                    <page string="Updat Field List">
+                      <field name="field_detail_id">
+                        <tree>
+                          <field name="create_date"/>
+                          <field name="field_name"/>
+                          <field name="field_value"/>
+                        </tree>
+                      </field>
+                   </page>
+                  </notebook>
+              </form>
+          </field>
+      </record>
+
+      <record id="lead_details_tree_view" model="ir.ui.view">
+          <field name="name">lead_details list</field>
+          <field name="model">lead_details</field>
+          <field name="arch" type="xml">
+              <tree string="Lead Details" create="false">
+                  <field name="name"/>
+                  <field name="email"/>
+                  <field name="mobile"/>
+              </tree>
+          </field>
+      </record>
+
+      <record id="action_lead_details" model="ir.actions.act_window">
+        <field name="name">Lead Details</field>
+        <field name="res_model">lead_details</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="context">{}</field>
+        <field name="help">customize the group here</field>
+      </record> -->
+      <!-- <menuitem name="Lead Details" id="base.lead_details" parent="base.menu_sale_config" sequence="6" /> -->
+      <menuitem action="action_lead_details" id="menu_action_lead_details" parent="base.menu_sale_report" sequence="20" />
+
+      <!--Field Details-->
+      <record id="field_details_form_view" model="ir.ui.view">
+          <field name="name">field_details form</field>
+          <field name="model">field_details</field>
+          <field name="arch" type="xml">
+              <form string="Field Details">
+                  <group>
+                    <field name="lead_name"/>
+                    <field name="field_name"/>
+                    <field name="field_value"/>
+                  </group>
+              </form>
+          </field>
+      </record>
+
+      <record id="field_details_tree_view" model="ir.ui.view">
+          <field name="name">field_details list</field>
+          <field name="model">field_details</field>
+          <field name="arch" type="xml">
+              <tree string="Field Details">
+                  <field name="create_date"/>
+                  <field name="lead_name"/>
+                  <field name="field_name"/>
+                  <field name="field_value"/>
+              </tree>
+          </field>
+      </record>
+
+      <record id="action_field_details" model="ir.actions.act_window">
+        <field name="name">Field Details</field>
+        <field name="res_model">field_details</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="context">{}</field>
+        <field name="help">customize the group here</field>
+      </record>
+      <!-- <menuitem name="Lead Details" id="base.field_details" parent="base.menu_sale_config" sequence="6" /> -->
+      <!-- <menuitem action="action_field_details" id="menu_action_field_details" parent="base.field_details" sequence="20" /> -->
+
+  </data>
+</openerp>

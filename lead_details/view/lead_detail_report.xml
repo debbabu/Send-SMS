@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+      <!-- QWeb Reports -->
+      <report
+          id="detail_of_lead"
+          model="lead_details"
+          string="Lead Info"
+          report_type="qweb-pdf"
+          name="lead_details.lead_report"
+          file="lead_details.lead_report"
+          attachment_use="False"
+      />
+    </data>
+</openerp>
