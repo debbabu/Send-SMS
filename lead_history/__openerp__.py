@@ -6,7 +6,12 @@
 
 =======================
 
-This module show the history of the lead. When any lead update it shows, which field updated.
+1. This module show the history of the lead. When any lead update it shows, which field updated with field value.
+2. You can print all that history of lead as a report.
+3. You can find Lead History menu under Report Section of Sales menu.
+
+   Sales > Reports > Lead History
+
     """,
     'author': "Debasisa Dash",
     'website': "http://www.fdshive.com",
