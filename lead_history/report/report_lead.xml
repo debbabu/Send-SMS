@@ -48,9 +48,9 @@
                 });
         </script>
 
-        <div class="header" style="text-align: center;">
+        <div class="report-header" style="text-align: center;">
           <button class="btn btn-primary btn-sm oe_button oe_highlight" id ="cn_print" style="float:right;"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
-          <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" class="logo"/>
+          <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" class="logo"/>
           <div style="font-size: 16px;font-weight: bold;"><span t-esc="company.name"/></div>
         </div>
         <div class="page">
@@ -84,7 +84,7 @@
         </div>
     </template>
     <template id="lead_history.lead_report">
-        <t t-call="web.html_container">
+        <t t-call="report.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-call="lead_history.report_lead_history_document"/>
             </t>

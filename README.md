@@ -6,5 +6,5 @@
 
 Functionality
 ==============
-1. You can get all history of lead in Reporting section of CRM menu.
-CRM > Reporting > Lead History.
+1. You can get all history of lead in Reports section of CRM menu.
+CRM > Reports > Lead History.

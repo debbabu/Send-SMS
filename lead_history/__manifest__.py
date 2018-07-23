@@ -8,9 +8,9 @@
 
 1. This module show the history of the lead. When any lead update it shows, which field updated with field value.
 2. You can print all that history of lead as a report.
-3. You can find Lead History menu under Reporting Section of CRM menu.
+3. You can find Lead History menu under Reports Section of CRM menu.
 
-   CRM > Reporting > Lead History
+   CRM > Reports > Lead History
     """,
     'author': "Debasish Dash",
     'website': "http://www.fdshive.com",
