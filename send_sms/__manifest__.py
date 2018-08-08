@@ -3,7 +3,7 @@
     'version': '0.1',
     'author': "Debasish Dash",
     'category': 'Tools',
-    'summary':'Allows you to send SMS',
+    'summary':'You can use multiple getway for multiple sms template to send SMS.',
     'description':'Allows you to send SMS to the mobile no.',
     'website': "http://www.fdshive.com",
     'depends': ['base','web',],
