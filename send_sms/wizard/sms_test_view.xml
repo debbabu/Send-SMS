@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="sms_test_wizard">
+      <field name="name">sms.test.form</field>
+      <field name="model">sms.test</field>
+      <field name="arch" type="xml">
+        <form string="SMS Test">
+          <!-- <group>
+            <field name="mobile"/>
+          </group> -->
+            <field name="test_result"/>
+          <footer>
+              <button string="Ok" class="btn-primary"/>
+              <!-- <button string="Cancel" class="btn-default" special="cancel" /> -->
+          </footer>
+        </form>
+      </field>
+    </record>
+    <record id="action_sms_test_wizard" model="ir.actions.act_window">
+        <field name="name">SMS Test</field>
+        <field name="res_model">sms.test</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+  </data>
+</odoo>
