@@ -1,5 +1,4 @@
 import logging
-# from openerp.osv import osv,expression
 from odoo import api, fields, models, tools
 _logger = logging.getLogger(__name__)
 class sms_track(models.Model):
@@ -20,8 +19,4 @@ class sms_track(models.Model):
             'response_id': response,
             'getway_id': getway_id,
         }
-        # value['model_id'] = model
-        # value['mobile_no'] = rendered_sms_to
-        # value['message_id'] = sms_rendered_content
-        # value['response_id'] = response
         track_id = self.create(value)
