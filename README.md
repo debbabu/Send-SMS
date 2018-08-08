@@ -24,3 +24,4 @@ Track History of all message responce. Also that history contain mobile no., mes
 SMS Wizard
 ===========
 You can add sms template to Action as a wizard. Also you can modify message content in wizard, but that one not reflect in orginal template.
+# Send-SMS
