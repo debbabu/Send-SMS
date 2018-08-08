@@ -3,6 +3,7 @@
 This module use for send sms from odoo. You need a sms gatway to setup for trigger sms. We can use multiple getway in multiple sms template. Also you can send sms mannualy usind wizard.
 
 You can find send sms functionality under Settings. You will get that menu in debug mode.
+
 Settings > Technical > Send SMS.
 
 
