@@ -25,3 +25,7 @@ Track History of all message responce. Also that history contain mobile no., mes
 SMS Wizard
 ===========
 You can add sms template to Action as a wizard. Also you can modify message content in wizard, but that one not reflect in orginal template.
+
+SMS Server Action and Automated Action
+======================================
+You can use SMS Template in Automated Action using Server Action. So that you can trigger SMS automatic as per trigger condition.
