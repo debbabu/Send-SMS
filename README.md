@@ -1,6 +1,6 @@
 # Send SMS
 
-This module use for send sms from odoo. You need a sms gatway to setup for trigger sms. You can use multiple getway for multiple sms template. Also you can send sms mannualy usind wizard.
+This module use for send sms from odoo. You need a sms gatway to setup for trigger sms. We can use multiple getway in multiple sms template. Also you can send sms mannualy usind wizard.
 
 You can find send sms functionality under Settings. You will get that menu in debug mode.
 
@@ -25,3 +25,7 @@ Track History of all message responce. Also that history contain mobile no., mes
 SMS Wizard
 ===========
 You can add sms template to Action as a wizard. Also you can modify message content in wizard, but that one not reflect in orginal template.
+
+SMS Server Action and Automated Action
+======================================
+You can use SMS Template in Automated Action using Server Action. So that you can trigger SMS automatic as per trigger condition.
