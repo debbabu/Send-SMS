@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-      <record id="getway_setup_form_view" model="ir.ui.view">
-        <field name="name">getway.setup.form</field>
-        <field name="model">getway_setup</field>
+      <record id="gateway_setup_form_view" model="ir.ui.view">
+        <field name="name">gateway.setup.form</field>
+        <field name="model">gateway_setup</field>
         <field name="arch" type="xml">
-            <form string="GetWay Setup">
+            <form string="GateWay Setup">
               <group>
                 <field name="name"/>
-                <field name="getway_url"/>
+                <field name="gateway_url"/>
               </group>
               <notebook>
                 <page string="Help" class="sms-page">
                   <group>
                     <div>
-                      <h4>Please follow below step to setup SMS Getway:</h4>
+                      <h4>Please follow below step to setup SMS Gateway:</h4>
                       <ul>
                         <li>Use {mobile} variable in Mobile no. place.</li>
                         <li>User {message} variable in Message content place.</li>
@@ -35,25 +35,25 @@
             </form>
         </field>
       </record>
-      <record id="getway_setup_tree_view" model="ir.ui.view">
-        <field name="name">getway_setup.list</field>
-        <field name="model">getway_setup</field>
+      <record id="gateway_setup_tree_view" model="ir.ui.view">
+        <field name="name">gateway_setup.list</field>
+        <field name="model">gateway_setup</field>
         <field name="arch" type="xml">
-            <tree string="GetWay Setup">
+            <tree string="GateWay Setup">
                 <field name="name"/>
             </tree>
         </field>
       </record>
-      <record id="action_getway_setup" model="ir.actions.act_window">
-        <field name="name">GetWay Setup</field>
-        <field name="res_model">getway_setup</field>
+      <record id="action_gateway_setup" model="ir.actions.act_window">
+        <field name="name">GateWay Setup</field>
+        <field name="res_model">gateway_setup</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" eval="False"/>
         <field name="context">{}</field>
       </record>
 
-      <menuitem action="action_getway_setup" id="menu_action_getway_setup" parent="base.send_sms" sequence="4" />
+      <menuitem action="action_gateway_setup" id="menu_action_gateway_setup" parent="base.send_sms" sequence="4" />
 
   </data>
 </odoo>

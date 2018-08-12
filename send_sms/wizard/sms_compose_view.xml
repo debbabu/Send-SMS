@@ -10,7 +10,7 @@
           <group>
             <group>
               <field name="sms_to_lead" invisible='1'/>
-              <field name="getwayurl_id" invisible='1'/>
+              <field name="gatewayurl_id" invisible='1'/>
             </group>
             <group>
               <field name="template_id" widget="selection"/>
