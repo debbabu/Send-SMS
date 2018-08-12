@@ -8,7 +8,7 @@
         <form string="SMS Track" create="false" edit="false">
           <group>
             <field name="model_id"/>
-            <field name="getway_id"/>
+            <field name="gateway_id"/>
             <field name="mobile_no"/>
             <field name="response_id"/>
           </group>
@@ -26,7 +26,7 @@
           <field name="create_date"/>
           <field name="model_id"/>
           <field name="mobile_no"/>
-          <field name="getway_id"/>
+          <field name="gateway_id"/>
         </tree>
       </field>
     </record>

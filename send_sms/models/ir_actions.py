@@ -5,7 +5,7 @@ class IrActionsServer(models.Model):
 
     _inherit = 'ir.actions.server'
 
-    sms_template_id = fields.Many2one('send_sms',string="SMS Template")
+    sms_template_id = fields.Many2one('send_sms',string="SMS Template",ondelete='set null', domain="[('model_id', '=', model_id)]",)
 
     @api.model
     def _get_states(self):
