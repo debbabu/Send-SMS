@@ -18,12 +18,12 @@ class SMSComposer(models.TransientModel):
     def _get_body_text(self):
         self.body_text= self.template_id.sms_html
         self.sms_to_lead = self.template_id.sms_to
-        self.getwayurl_id = self.template_id.getway_id
+        self.gatewayurl_id = self.template_id.gateway_id
 
     template_id = fields.Many2one('send_sms', 'SMS Template')
     body_text = fields.Text('Body')
     sms_to_lead = fields.Char(string='To (Mobile)')
-    getwayurl_id = fields.Many2one('getway_setup','SMS Getway')
+    gatewayurl_id = fields.Many2one('gateway_setup','SMS Gateway')
 
     @api.multi
     def send_sms_action(self):
@@ -32,5 +32,5 @@ class SMSComposer(models.TransientModel):
             my_model = self._context['active_model']
             message = self.env['send_sms'].render_template(self.body_text, my_model, ids)
             mobile_no = self.env['send_sms'].render_template(self.sms_to_lead, my_model, ids)
-            self.env['send_sms'].send_sms_link(message, mobile_no,ids,my_model,self.getwayurl_id)
+            self.env['send_sms'].send_sms_link(message, mobile_no,ids,my_model,self.gatewayurl_id)
         return True

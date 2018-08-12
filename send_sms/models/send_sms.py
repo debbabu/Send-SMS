@@ -46,7 +46,7 @@ class SendSMS(models.Model):
     _description = "Send SMS"
 
     name = fields.Char(required=True, string='Name')
-    getway_id = fields.Many2one('getway_setup',required=True,string='SMS Getway')
+    gateway_id = fields.Many2one('gateway_setup',required=True,string='SMS Gateway')
     model_id = fields.Many2one('ir.model', string='Applies to', help="The kind of document with with this template can be used")
     sms_to = fields.Char(string='To (Mobile)', help="To mobile number (placeholders may be used here)")
     sms_html = fields.Text('Body')
@@ -58,9 +58,9 @@ class SendSMS(models.Model):
     def send_sms(self, template_id, record_id):
         sms_rendered_content = self.env['send_sms'].render_template(template_id.sms_html, template_id.model_id.model, record_id)
         rendered_sms_to = self.env['send_sms'].render_template(template_id.sms_to, template_id.model_id.model, record_id)
-        self.send_sms_link(sms_rendered_content,rendered_sms_to,record_id,template_id.model_id.model,template_id.getway_id)
+        self.send_sms_link(sms_rendered_content,rendered_sms_to,record_id,template_id.model_id.model,template_id.gateway_id)
 
-    def send_sms_link(self,sms_rendered_content,rendered_sms_to,record_id,model,getway_url_id):
+    def send_sms_link(self,sms_rendered_content,rendered_sms_to,record_id,model,gateway_url_id):
         sms_rendered_content = sms_rendered_content.encode('ascii', 'ignore')
         sms_rendered_content_msg = urllib.quote_plus(sms_rendered_content)
         if rendered_sms_to:
@@ -72,11 +72,11 @@ class SendSMS(models.Model):
                 rendered_sms_to = rendered_sms_to.replace('-', '')
 
         if rendered_sms_to:
-            send_url = getway_url_id.getway_url
+            send_url = gateway_url_id.gateway_url
             send_link = send_url.replace('{mobile}',rendered_sms_to).replace('{message}',sms_rendered_content_msg)
             response = requests.request("GET", url = send_link).text
-            self.env['sms_track'].sms_track_create(record_id, sms_rendered_content, rendered_sms_to, response, model, getway_url_id.id )
-            if model != 'getway_setup':
+            self.env['sms_track'].sms_track_create(record_id, sms_rendered_content, rendered_sms_to, response, model, gateway_url_id.id )
+            if model != 'gateway_setup':
                 self.env['mail.message'].create({
                 'author_id': http.request.env.user.partner_id.id,
                 'date': datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
