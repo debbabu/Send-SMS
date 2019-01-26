@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
       <!-- QWeb Reports -->
       <report
-          id="detail_of_lead"
+          id="history_of_lead"
           model="lead_history"
           string="Lead Info"
           report_type="qweb-pdf"
@@ -12,4 +12,4 @@
           attachment_use="False"
       />
     </data>
-</openerp>
+</odoo>
