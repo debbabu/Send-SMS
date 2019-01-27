@@ -1,10 +1,22 @@
-# Lead-History
+# HTTP API
 
-1. You can fecth the history of a lead, means when update that lead and which field updated.
-2. Through this we can fetch all previous value of a perticular field of a lead.
-3. We can also print that lead history as a report.
+This module allow only two method i.e. GET and POST.
 
-Functionality
-==============
-1. You can get all history of lead in Report section of Sales menu.
-Sales > Report > Lead History.
+GET Method
+===========
+
+In GET method, you will pass value with key name in url.
+Also pass user and password in url.
+As per user and password, It send value to the respected model or create a record.
+
+Example:
+========
+
+http://localhost:8069/get-api?user=test&password=TgHpXa7hjHCFUUFJ&name=ram&country_id=Spain&tag_ids=Software,Product,Services
+
+POST Method
+============
+In POST method, you will pass value with key name in encrypted.
+Also pass user and password.
+As per user and password, it will create a new record in respected model.
+http://localhost:8069/post-api, Use this url and pass value in POST method.
