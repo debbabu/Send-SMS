@@ -14,7 +14,7 @@
     'demo': [
         ],
     'images':['static/description/banner-1.png'],
-    'license': 'LGPL-3',
+    # 'license': 'LGPL-3',
     'installable':True,
     'auto_install':False,
 }
