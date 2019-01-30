@@ -16,7 +16,7 @@
         'security/ir.model.access.csv',
     ],
     'images':['static/description/banner.png'],
-    'license': 'LGPL-3',
+    # 'license': 'LGPL-3',
     'installable':True,
     'auto_install':False,
 }
