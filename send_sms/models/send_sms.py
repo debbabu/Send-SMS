@@ -82,7 +82,7 @@ class SendSMS(models.Model):
                 'date': datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
                 'model': model,
                 'res_id': record_id,
-                'message_type': 'email',
+                'message_type': 'comment',
                 'body': '<b>SMS: </b>'+sms_rendered_content,
                 })
             return response
