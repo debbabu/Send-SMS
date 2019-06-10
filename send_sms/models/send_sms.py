@@ -84,6 +84,7 @@ class SendSMS(models.Model):
                 'res_id': record_id,
                 'message_type': 'comment',
                 'body': '<b>SMS: </b>'+sms_rendered_content,
+                'reply_to': http.request.env.user.email or '',
                 })
             return response
 
